@@ -1,0 +1,19 @@
+{
+  "name": "minbin",
+  "version": "1.0.0",
+  "description": "A minimal set of tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ydlamba/minbin.git"
+  },
+  "author": "Yash Dev Lamba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ydlamba/minbin/issues"
+  },
+  "homepage": "https://github.com/ydlamba/minbin#readme",
+}
