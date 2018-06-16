@@ -12,9 +12,12 @@ class Header extends React.PureComponent<Props> {
   public render() {
     return (
       <header>
-        <h1>minbin</h1>
+        <h1>
+          <span className="min">min</span>
+          <span className="bin">bin</span>
+        </h1>
         <span>
-          <a href="https://github.com/ydlamba/minbin" target="_blank"><Github /></a>
+          <a href="https://github.com/ydlamba/minbin" target="_blank"><Github color="#888" size={30}/></a>
         </span>
       </header>
     );
