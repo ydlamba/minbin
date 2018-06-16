@@ -5,12 +5,12 @@ import { State } from '../../constants';
 interface Props {
 }
 
-class Header extends React.PureComponent<Props> {
+class SideBar extends React.PureComponent<Props> {
   public render() {
     return (
-      <header>
-        <h1>Header</h1>
-      </header>
+      <nav>
+        <h2>SideBar</h2>
+      </nav>
     );
   }
 }
@@ -28,4 +28,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header);
+)(SideBar);

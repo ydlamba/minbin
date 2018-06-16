@@ -22,6 +22,11 @@ class App extends React.Component<Props & { match: any; location: any }> {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+  };
+};
+
 export default withRouter(
   connect(
     null,

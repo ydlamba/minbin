@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as ReactGA from 'react-ga';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
-
+import AppShell from './components/app-shell';
 import configureStore from './store/configure-store';
 
 // Google analytics
