@@ -1,3 +1,6 @@
+import './app.css';
+import 'milligram';
+
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -6,8 +9,6 @@ import Header from './header';
 import SideBar from './side-bar';
 import Main from './main';
 
-import './app.css';
-
 type Props = ReturnType<typeof mapDispatchToProps>;
 
 class App extends React.Component<Props & { match: any; location: any }> {
@@ -15,8 +16,8 @@ class App extends React.Component<Props & { match: any; location: any }> {
     return (
       <div className="app-container">
         <Header />
-        <SideBar />
         <Main />
+        <SideBar />
       </div>
     );
   }

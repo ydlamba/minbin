@@ -1,3 +1,5 @@
+import './index.css';
+
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../../constants';
@@ -9,7 +11,11 @@ class SideBar extends React.PureComponent<Props> {
   public render() {
     return (
       <nav>
-        <h2>SideBar</h2>
+        <ul>
+          <li>MD5</li>
+          <li>SHA-1</li>
+          <li>SHA-256</li>
+        </ul>
       </nav>
     );
   }
