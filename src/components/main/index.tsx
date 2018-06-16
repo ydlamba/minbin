@@ -9,6 +9,7 @@ import SideBar from './side-bar';
 
 interface Props {
   input?: string;
+  tool?: string;
   setInput: (val: any) => void;
 }
 
@@ -18,19 +19,32 @@ class Main extends React.PureComponent<Props> {
       this.props.setInput(event.target.value);
     }
   }
+  public calculateHash() {
+    const input = this.props.input;
+    switch (this.props.tool) {
+      case 'md5':
+        return CryptoJS.MD5(input).toString();
+      case 'sha1':
+        return CryptoJS.SHA1(input).toString();
+      case 'sha256':
+        return CryptoJS.SHA256(input).toString();
+      default:
+        return;
+    }
+  }
   public render() {
     console.log(this.props.input);
     return (
       <main>
-        <SideBar/>
         <div className="tool">
           <div className="input-panel">
             <textarea onChange={this.handleChange.bind(this)}/>
           </div>
           <div className="output-panel">
-            {CryptoJS.SHA256(this.props.input).toString()}
+            {this.calculateHash()}
           </div>
         </div>
+        <SideBar/>
       </main>
     );
   }
@@ -39,6 +53,7 @@ class Main extends React.PureComponent<Props> {
 function mapStateToProps(state: State, ownProps) {
   return {
     input: state.input,
+    tool: state.tool,
   };
 }
 
