@@ -11,7 +11,7 @@ nav {
 	height: 70%;
 	width: 20%;
 	text-align: center;
-	color: #edf5e1;
+	color: #4717f6;
 }
 
 ul {
@@ -38,10 +38,12 @@ textarea {
   outline: none;
   overflow: auto;
   resize: none;
-  border: 1px solid #2196F3;
-  color: #2196F3;
-  font-size: 1.5em;
+  color: #e7dfdd;
+  font-size: 1.2em;
   background: inherit;
+  border-radius: 4px;
+  padding: 5px 0;
+  background: #0e0b16;
 }
 
 .tool {
@@ -53,10 +55,14 @@ textarea {
 }
 
 .input-panel {
-	
+	height: auto;
 }
 .output-panel {
-	font-weight: 300;
-	color: #c43235;
+	height: auto;
+	color: #4717f6;
 	font-size: 1.5em;
+}
+
+h3 {
+	padding: 10px;
 }

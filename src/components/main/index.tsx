@@ -32,14 +32,19 @@ class Main extends React.PureComponent<Props> {
         return;
     }
   }
+  public componentDidMount() {
+    (this.refs.input as any).focus();
+  }
   public render() {
     console.log(this.props.input);
     return (
       <main>
         <div className="tool">
+          <h3>Input Data</h3>
           <div className="input-panel">
-            <textarea onChange={this.handleChange.bind(this)}/>
+            <textarea ref="input" onChange={this.handleChange.bind(this)} autofocus/>
           </div>
+          <h3>Hash</h3>
           <div className="output-panel">
             {this.calculateHash()}
           </div>

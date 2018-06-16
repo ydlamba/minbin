@@ -14,7 +14,6 @@ class SideBar extends React.PureComponent<Props> {
   public render() {
     return (
       <nav>
-        <h3 className="list-heading">Hash Calculator</h3>
         <ul>
           <li onClick={this.handleChange.bind(this, 'md5')}>MD5</li>
           <li onClick={this.handleChange.bind(this, 'sha1')}>SHA-1</li>

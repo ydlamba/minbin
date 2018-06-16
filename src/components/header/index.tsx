@@ -17,7 +17,7 @@ class Header extends React.PureComponent<Props> {
           <span className="bin">bin</span>
         </h1>
         <span>
-          <a href="https://github.com/ydlamba/minbin" target="_blank"><Github color="#888" size={30}/></a>
+          <a href="https://github.com/ydlamba/minbin" target="_blank"><Github color="#4717f6" size={30}/></a>
         </span>
       </header>
     );

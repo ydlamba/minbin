@@ -11,6 +11,5 @@ html, body, div {
 
 body {
 	font-family: 'Roboto', sans-serif;
-	overflow: hidden;
-	background: #282828;
+	overflow: auto;
 }

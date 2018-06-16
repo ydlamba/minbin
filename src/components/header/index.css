@@ -4,7 +4,9 @@ header {
 	justify-content: space-between;
 	height: 80px;
 	padding: 0 20px;
-	color: #edf5e1;
+	color: #e7dfdd;
+	background: #0e0b16;
+	border-bottom: 4px solid #4717f6;
 }
 
 header h1 {
@@ -14,8 +16,8 @@ header h1 {
 }
 
 .min {
-	color: #edf5e1;
+	color: #e7dfdd;
 }
 .bin {
-	color: #2196F3;
+	color: #4717f6;
 }
