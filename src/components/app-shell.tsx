@@ -14,15 +14,12 @@ export default class AppShell extends React.Component<Props> {
 
   public render() {
     return (
-      <div>
-        <Switch>
-          <Route path="/" exact component={App} />
-          <Route path="/edited" component={App} />
-          <Route path="/gist/:mode/:username/:id/:revision/:filename" component={App} />
-          <Route path="/examples/:mode/:example_name" component={App} />
-          <Route path="/custom/:mode" component={App} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/" component={App} />
+        <Route path="/md5" component={App} />
+        <Route path="/sha1" component={App} />
+        <Route path="/sha256" component={App} />
+      </Switch>
     );
   }
 }

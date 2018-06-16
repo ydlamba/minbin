@@ -1,4 +1,59 @@
 main {
-	display: inline-block;
-	border: 1px solid blue;
+	display: flex;
+	height: 100%;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 70%;
+	width: 20%;
+	text-align: center;
+	color: #555;
+}
+
+ul {
+	width: 100%;
+	list-style: none;
+}
+
+li {
+	vertical-align: middle;
+	width: 100%;
+	height: 40px;
+}
+
+li:hover {
+	background: #eee;
+}
+
+textarea {
+  width: 100%;
+  height: 400px;
+  outline: none;
+  overflow: auto;
+  resize: none;
+  border: 1px solid #2196F3;
+  color: #edf5e1;
+  font-size: 1.5em;
+  background: inherit;
+}
+
+.tool {
+	display: flex;
+	width: 60%;
+	flex-direction: column;
+	margin: 20px 50px;
+	text-align: center;
+}
+
+.input-panel {
+	
+}
+.output-panel {
+	font-weight: 300;
+	color: #2196F3;
+	font-size: 1.5em;
 }

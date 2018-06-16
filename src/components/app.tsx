@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import * as EditorActions from '../actions';
 import Header from './header';
-import SideBar from './side-bar';
 import Main from './main';
 
 type Props = ReturnType<typeof mapDispatchToProps>;
@@ -16,7 +15,6 @@ class App extends React.Component<Props & { match: any; location: any }> {
       <div className="app-container">
         <Header />
         <Main />
-        <SideBar />
       </div>
     );
   }

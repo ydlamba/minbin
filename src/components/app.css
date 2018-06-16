@@ -5,6 +5,12 @@
 	padding: 0;
 }
 
+html, body, div {
+	height: 100%;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
+	overflow: hidden;
+	background: #282828;
 }

@@ -5,6 +5,7 @@ import * as React from 'react';
 import * as Actions from '../../actions';
 import { connect } from 'react-redux';
 import { State } from '../../constants';
+import SideBar from './side-bar';
 
 interface Props {
   input?: string;
@@ -13,18 +14,22 @@ interface Props {
 
 class Main extends React.PureComponent<Props> {
   public handleChange(event) {
-    this.props.setInput(event.target.value);
+    if (event.target.value && event.target.value !== '') {
+      this.props.setInput(event.target.value);
+    }
   }
   public render() {
     console.log(this.props.input);
     return (
       <main>
-        <h3>Main</h3>
-        <div className="input-panel">
-          <input type="text" onChange={this.handleChange.bind(this)}/>
-        </div>
-        <div className="output-panel">
-        {CryptoJS.SHA256(this.props.input).toString()}
+        <SideBar/>
+        <div className="tool">
+          <div className="input-panel">
+            <textarea onChange={this.handleChange.bind(this)}/>
+          </div>
+          <div className="output-panel">
+            {CryptoJS.SHA256(this.props.input).toString()}
+          </div>
         </div>
       </main>
     );
