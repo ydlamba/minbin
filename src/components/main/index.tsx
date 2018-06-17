@@ -42,6 +42,9 @@ class Main extends React.PureComponent<Props> {
     textarea.focus();
     textarea.spellCheck = false;
     switch (this.props.history.location.pathname) {
+      case '/':
+        this.props.history.push(this.props.tool);
+        break;
       case '/md5':
         this.props.setTool('md5');
         break;
