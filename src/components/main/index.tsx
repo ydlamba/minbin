@@ -35,7 +35,9 @@ class Main extends React.PureComponent<Props> {
     }
   }
   public componentDidMount() {
-    (this.refs.input as any).focus();
+    const textarea = this.refs.input as any;
+    textarea.focus();
+    textarea.spellCheck = false;
   }
   public render() {
     return (
@@ -43,7 +45,7 @@ class Main extends React.PureComponent<Props> {
         <div className="tool">
           <h3>Input Data</h3>
           <div className="input-panel">
-            <textarea ref="input" onChange={this.handleChange.bind(this)} value={this.props.input}/>
+            <textarea ref="input" onChange={this.handleChange.bind(this)} value={this.props.input} spellCheck="false"/>
           </div>
           <h3>Hash</h3>
           <div className="output-panel">
