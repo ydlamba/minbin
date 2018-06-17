@@ -15,13 +15,11 @@ class SideBar extends React.PureComponent<Props> {
     return (
       <nav>
         <ul>
+          <h3>Hash Calculator</h3>
           <li onClick={this.handleChange.bind(this, 'md5')}>MD5</li>
           <li onClick={this.handleChange.bind(this, 'sha1')}>SHA-1</li>
           <li onClick={this.handleChange.bind(this, 'sha256')}>SHA-256</li>
         </ul>
-        <span>
-          Version
-        </span>
       </nav>
     );
   }

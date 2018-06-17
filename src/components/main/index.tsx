@@ -42,7 +42,7 @@ class Main extends React.PureComponent<Props> {
         <div className="tool">
           <h3>Input Data</h3>
           <div className="input-panel">
-            <textarea ref="input" onChange={this.handleChange.bind(this)}/>
+            <textarea ref="input" onChange={this.handleChange.bind(this)} value={this.props.input}/>
           </div>
           <h3>Hash</h3>
           <div className="output-panel">
@@ -50,6 +50,9 @@ class Main extends React.PureComponent<Props> {
           </div>
         </div>
         <SideBar/>
+        <footer>
+          <span className="version">v1.0.0</span>
+        </footer>
       </main>
     );
   }

@@ -1,17 +1,17 @@
 main {
 	display: flex;
-	height: 100%;
 	color: #fff;
+	justify-content: space-between;
+	margin: 20px 50px;
 }
 
 nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
-	height: 70%;
+	justify-content: space-between;
 	width: 20%;
-	text-align: center;
+	font-weight: 300;
 }
 
 ul {
@@ -25,6 +25,7 @@ ul {
 li {
 	padding: 10px;
 	user-select: none;
+	font-size: 1.2em;
 }
 
 li:hover {
@@ -50,9 +51,8 @@ textarea {
 
 .tool {
 	display: flex;
-	width: 60%;
+	width: 75%;
 	flex-direction: column;
-	margin: 20px 50px;
 	text-align: center;
 }
 
@@ -67,5 +67,14 @@ textarea {
 
 h3 {
 	padding: 10px;
-	font-weight: 300;
+	font-weight: 400;
+}
+
+footer {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+.version {
+	color: #33CCFF;
 }
