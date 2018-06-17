@@ -1,6 +1,7 @@
 main {
 	display: flex;
 	height: 100%;
+	color: #fff;
 }
 
 nav {
@@ -11,7 +12,6 @@ nav {
 	height: 70%;
 	width: 20%;
 	text-align: center;
-	color: #4717f6;
 }
 
 ul {
@@ -28,7 +28,7 @@ li {
 }
 
 li:hover {
-	color: #2196F3;
+	color: #33CCFF;
 	cursor: pointer;
 }
 
@@ -38,12 +38,14 @@ textarea {
   outline: none;
   overflow: auto;
   resize: none;
-  color: #e7dfdd;
+  color: #33CCFF;
   font-size: 1.2em;
   background: inherit;
+  border: 1px solid #33CCFF;
   border-radius: 4px;
   padding: 5px 0;
-  background: #0e0b16;
+  background: #252746;
+  font-family: inherit;
 }
 
 .tool {
@@ -59,10 +61,11 @@ textarea {
 }
 .output-panel {
 	height: auto;
-	color: #4717f6;
+	color: #33CCFF;
 	font-size: 1.5em;
 }
 
 h3 {
 	padding: 10px;
+	font-weight: 300;
 }

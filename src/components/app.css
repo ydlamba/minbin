@@ -13,3 +13,8 @@ body {
 	font-family: 'Roboto', sans-serif;
 	overflow: auto;
 }
+
+.app-container {
+	background: #252746;
+	background-size: cover;
+}

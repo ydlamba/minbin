@@ -2,22 +2,26 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
+	height: 50px;
 	padding: 0 20px;
-	color: #e7dfdd;
-	background: #0e0b16;
-	border-bottom: 4px solid #4717f6;
+	color: #fff;
+	text-transform: uppercase;
 }
 
 header h1 {
 	display: inline-block;
-	font-weight: 300;
-	font-size: 3.5em;
+	font-size: 2em;
 }
 
 .min {
-	color: #e7dfdd;
+	font-weight: 300;
+	color: #fff;
 }
 .bin {
-	color: #4717f6;
+	font-weight: 500;
+	color: #33CCFF;
+}
+
+.alert-icon:hover {
+	stroke: #33CCFF;
 }

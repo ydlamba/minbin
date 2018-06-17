@@ -10,7 +10,6 @@ export default (state: State = DEFAULT_STATE, action: Action): State => {
   	case SET_TOOL:
   		return {
   			...state,
-  			input: null,
   			tool: action.tool,
   		};
   	case SET_INPUT:

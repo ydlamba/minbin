@@ -3,7 +3,7 @@ import './index.css'
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../../constants';
-import { Github } from 'react-feather';
+import { AlertCircle } from 'react-feather';
 
 interface Props {
 }
@@ -17,7 +17,7 @@ class Header extends React.PureComponent<Props> {
           <span className="bin">bin</span>
         </h1>
         <span>
-          <a href="https://github.com/ydlamba/minbin" target="_blank"><Github color="#4717f6" size={30}/></a>
+          <a href="//github.com/ydlamba/minbin/issues" target="_blank"><AlertCircle className="alert-icon" color="#fff" size={20}/></a>
         </span>
       </header>
     );
