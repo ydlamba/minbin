@@ -11,7 +11,7 @@ import SideBar from './side-bar';
 interface Props {
   input?: string;
   tool?: string;
-  history: any;
+  history?: any;
   setInput: (val: any) => void;
   setTool: (val: any) => void;
 }
@@ -39,8 +39,8 @@ class Main extends React.PureComponent<Props> {
   }
   public componentDidMount() {
     const textarea = this.refs.input as any;
-    textarea.focus();
-    textarea.spellCheck = false;
+    textarea.value = this.props.input;
+
     switch (this.props.history.location.pathname) {
       case '/':
         this.props.history.push(this.props.tool);
@@ -62,9 +62,9 @@ class Main extends React.PureComponent<Props> {
     return (
       <main>
         <div className="tool">
-          <h3>Input Data</h3>
+          <h3>Input</h3>
           <div className="input-panel">
-            <textarea ref="input" onChange={this.handleChange.bind(this)} value={this.props.input}/>
+            <textarea ref="input" onChange={this.handleChange.bind(this)} spellCheck={false} autoFocus/>
           </div>
           <h3>Hash</h3>
           <div className="output-panel">

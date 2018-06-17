@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 
 interface Props {
   tool?: string;
-  history: any;
+  history?: any;
   setTool: (val: any) => void;
 }
 
@@ -19,7 +19,7 @@ class SideBar extends React.PureComponent<Props> {
     return (
       <nav>
         <ul>
-          <h3>Hash Calculator</h3>
+          <h3>Options</h3>
           <li className={this.props.tool === 'md5' ? 'active' : ''} onClick={this.handleChange.bind(this, 'md5')}>MD5</li>
           <li className={this.props.tool === 'sha1' ? 'active' : ''} onClick={this.handleChange.bind(this, 'sha1')}>SHA-1</li>
           <li className={this.props.tool === 'sha256' ? 'active' : ''} onClick={this.handleChange.bind(this, 'sha256')}>SHA-256</li>
