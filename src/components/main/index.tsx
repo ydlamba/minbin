@@ -37,9 +37,13 @@ class Main extends React.PureComponent<Props> {
         return;
     }
   }
+  public addEventListeners(el, s, fn) {
+    s.split(' ').forEach(e => el.addEventListener(e, fn, false));
+  }
   public componentDidMount() {
     const textarea = this.refs.input as any;
     textarea.value = this.props.input;
+    this.addEventListeners(textarea, 'propertychange change click keyup input paste', this.handleChange.bind(this));
 
     switch (this.props.history.location.pathname) {
       case '/':
@@ -64,7 +68,7 @@ class Main extends React.PureComponent<Props> {
         <div className="tool">
           <h3>Input</h3>
           <div className="input-panel">
-            <textarea ref="input" onChange={this.handleChange.bind(this)} spellCheck={false} autoFocus/>
+            <textarea ref="input" spellCheck={false} autoFocus/>
           </div>
           <h3>Hash</h3>
           <div className="output-panel">
