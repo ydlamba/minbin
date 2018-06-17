@@ -13,6 +13,8 @@ interface Props {
   setInput: (val: any) => void;
 }
 
+declare const VERSION: string;
+
 class Main extends React.PureComponent<Props> {
   public handleChange(event) {
     if (event.target.value && event.target.value !== '') {
@@ -36,7 +38,6 @@ class Main extends React.PureComponent<Props> {
     (this.refs.input as any).focus();
   }
   public render() {
-    console.log(this.props.input);
     return (
       <main>
         <div className="tool">
@@ -51,7 +52,7 @@ class Main extends React.PureComponent<Props> {
         </div>
         <SideBar/>
         <footer>
-          <span className="version">v1.0.0</span>
+          <span className="version">v{VERSION}</span>
         </footer>
       </main>
     );

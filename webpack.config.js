@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CheckerPlugin } = require("awesome-typescript-loader");
 
@@ -42,7 +43,10 @@ module.exports = (env, argv) => {
         filename: "index.html",
         template: "public/index.html"
       }),
-      new CheckerPlugin()
+      new CheckerPlugin(),
+      new webpack.DefinePlugin({
+        VERSION: JSON.stringify(require("./package.json").version)
+      })
     ],
 
     devServer: {

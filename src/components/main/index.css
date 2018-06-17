@@ -33,6 +33,10 @@ li:hover {
 	cursor: pointer;
 }
 
+.active {
+	color: #33CCFF;
+}
+
 textarea {
   width: 100%;
   height: 400px;
