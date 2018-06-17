@@ -2,7 +2,7 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import * as ReactGA from 'react-ga';
 import { Provider } from 'react-redux';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import AppShell from './components/app-shell';
 import configureStore from './store/configure-store';
 
@@ -20,9 +20,9 @@ const store = configureStore();
 // React application to the DOM!
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
+    <BrowserRouter>
       <AppShell logPageView={logPageView} />
-    </HashRouter>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );

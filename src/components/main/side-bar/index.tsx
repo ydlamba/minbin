@@ -2,15 +2,18 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import * as Actions from '../../../actions';
 import { State } from '../../../constants';
+import { withRouter } from 'react-router-dom';
 
 interface Props {
-  tool?: string,
+  tool?: string;
+  history: any;
   setTool: (val: any) => void;
 }
 
 class SideBar extends React.PureComponent<Props> {
   public handleChange(value) {
     this.props.setTool(value);
+    this.props.history.push(value);
   }
   public render() {
     return (
@@ -40,7 +43,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(SideBar);
+)(SideBar));

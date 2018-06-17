@@ -15,10 +15,10 @@ export default class AppShell extends React.Component<Props> {
   public render() {
     return (
       <Switch>
-        <Route path="/" component={App} />
+        <Route path="/" exact component={App} />
         <Route path="/md5" component={App} />
-        <Route path="/sha1" component={App} />
         <Route path="/sha256" component={App} />
+        <Route path="/sha1" component={App} />
       </Switch>
     );
   }

@@ -17,7 +17,7 @@ class Header extends React.PureComponent<Props> {
           <span className="bin">bin</span>
         </h1>
         <span>
-          <a href="//github.com/ydlamba/minbin/issues" target="_blank"><AlertCircle className="alert-icon" color="#fff" size={20}/></a>
+          <a href="//github.com/ydlamba/minbin/issues" target="_blank"><AlertCircle className="alert" color="#fff" size={20}/></a>
         </span>
       </header>
     );

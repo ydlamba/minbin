@@ -4,13 +4,16 @@ import * as CryptoJS from 'crypto-js';
 import * as React from 'react';
 import * as Actions from '../../actions';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { State } from '../../constants';
 import SideBar from './side-bar';
 
 interface Props {
   input?: string;
   tool?: string;
+  history: any;
   setInput: (val: any) => void;
+  setTool: (val: any) => void;
 }
 
 declare const VERSION: string;
@@ -38,6 +41,20 @@ class Main extends React.PureComponent<Props> {
     const textarea = this.refs.input as any;
     textarea.focus();
     textarea.spellCheck = false;
+    this.props.history.push(this.props.tool);
+    switch (this.props.history.location.pathname) {
+      case '/md5':
+        this.props.setTool('md5');
+        break;
+      case '/sha1':
+        this.props.setTool('sha1');
+        break;
+      case '/sha256':
+        this.props.setTool('sha256');
+        break;
+      default:
+        break;
+    }
   }
   public render() {
     return (
@@ -45,7 +62,7 @@ class Main extends React.PureComponent<Props> {
         <div className="tool">
           <h3>Input Data</h3>
           <div className="input-panel">
-            <textarea ref="input" onChange={this.handleChange.bind(this)} value={this.props.input} spellCheck="false"/>
+            <textarea ref="input" onChange={this.handleChange.bind(this)} value={this.props.input}/>
           </div>
           <h3>Hash</h3>
           <div className="output-panel">
@@ -73,10 +90,13 @@ const mapDispatchToProps = dispatch => {
     setInput: val => {
       dispatch(Actions.setInput(val));
     },
+    setTool: val => {
+      dispatch(Actions.setTool(val));
+    },
   };
 };
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Main);
+)(Main));

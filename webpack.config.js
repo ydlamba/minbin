@@ -65,7 +65,8 @@ module.exports = (env, argv) => {
       watchContentBase: true,
       watchOptions: {
         ignored: /node_modules/
-      }
+      },
+      historyApiFallback: true
     },
 
     node: {
