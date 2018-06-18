@@ -2,7 +2,6 @@
   "name": "minbin",
   "version": "0.1.8",
   "description": "A minimal set of tools",
-  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --hot --inline",
     "build": "npm run clean && webpack --mode production --progress",
@@ -15,8 +14,8 @@
     "type": "git",
     "url": "git+https://github.com/ydlamba/minbin.git"
   },
-  "author": "Yash Dev Lamba",
-  "license": "ISC",
+  "author": "Yash Dev Lamba <yashdev18@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ydlamba/minbin/issues"
   },
