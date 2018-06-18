@@ -55,9 +55,9 @@ class Main extends React.PureComponent<Props, IState> {
     s.split(' ').forEach(e => el.addEventListener(e, fn, false));
   }
   public componentDidUpdate() {
-    if(this.state.copied) {
+    if (this.state.copied) {
       setTimeout(() => {
-        this.setState({copied: false});
+        this.setState({ copied: false });
       }, 3500);
     }
   }
@@ -87,7 +87,7 @@ class Main extends React.PureComponent<Props, IState> {
     }
   }
   public onCopy() {
-    this.setState({copied: true});
+    this.setState({ copied: true });
   }
   public render() {
     return (
@@ -95,18 +95,23 @@ class Main extends React.PureComponent<Props, IState> {
         <div className="tool">
           <h3>Input</h3>
           <div className="input-panel">
-            <textarea placeholder="Remember, be nice!" ref="input" spellCheck={false} autoFocus/>
+            <textarea placeholder="Remember, be nice!" ref="input" spellCheck={false} autoFocus />
           </div>
           <h3>Hash</h3>
           <div className="output-panel">
             <span className="hash">{this.calculateOutput()}</span>
-            <Clipboard className="copy-icon" data-clipboard-text={this.calculateOutput()} button-title="Copy" onSuccess={this.onCopy.bind(this)}>
-              <Copy className="alert-icon" color="#fff" size={20}/>
+            <Clipboard
+              className="copy-icon"
+              data-clipboard-text={this.calculateOutput()}
+              button-title="Copy"
+              onSuccess={this.onCopy.bind(this)}
+            >
+              <Copy className="alert-icon" color="#fff" size={20} />
             </Clipboard>
           </div>
           <span className="copied">{this.state.copied ? 'Copied!' : ''}</span>
         </div>
-        <SideBar/>
+        <SideBar />
         <footer>
           <span className="version">v{VERSION}</span>
         </footer>
@@ -133,7 +138,9 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default withRouter(connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Main));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Main)
+);

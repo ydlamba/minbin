@@ -1,27 +1,27 @@
 header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 50px;
-	padding: 0 20px;
-	color: #fff;
-	text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 20px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 header h1 {
-	display: inline-block;
-	font-size: 2em;
+  display: inline-block;
+  font-size: 2em;
 }
 
 .min {
-	font-weight: 300;
-	color: #fff;
+  font-weight: 300;
+  color: #fff;
 }
 .bin {
-	font-weight: 500;
-	color: #33CCFF;
+  font-weight: 500;
+  color: #33ccff;
 }
 
 .alert-icon:hover {
-	stroke: #33CCFF;
+  stroke: #33ccff;
 }

@@ -1,27 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-html, body, #root {
-	height: 100%;
+html,
+body,
+#root {
+  height: 100%;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
-	overflow: auto;
+  font-family: "Roboto", sans-serif;
+  overflow: auto;
 }
 
 .app-container {
-	background: #252746;
-	background-size: cover;
-	height: 100%;
+  background: #252746;
+  background-size: cover;
+  height: 100%;
 }
 
 ::-webkit-scrollbar {
-    width: 0.4em;
+  width: 0.4em;
 }
 
 ::-webkit-scrollbar-thumb {

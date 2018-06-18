@@ -1,41 +1,41 @@
 main {
-	display: flex;
-	color: #fff;
-	justify-content: space-between;
-	margin: 20px 50px;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  margin: 20px 50px;
 }
 
 nav {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	width: 20%;
-	font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+  font-weight: 300;
 }
 
 ul {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
 }
 
 li {
-	padding: 10px;
-	user-select: none;
-	font-size: 1.2em;
+  padding: 10px;
+  user-select: none;
+  font-size: 1.2em;
 }
 
 li:hover {
-	color: #33CCFF;
-	cursor: pointer;
+  color: #33ccff;
+  cursor: pointer;
 }
 
 .active {
-	color: #33CCFF;
-	font-weight: 400;
+  color: #33ccff;
+  font-weight: 400;
 }
 
 textarea,
@@ -43,9 +43,9 @@ textarea,
   width: 100%;
   outline: none;
   resize: none;
-  color: #33CCFF;
+  color: #33ccff;
   font-size: 1.2em;
-  border: 1px solid #33CCFF;
+  border: 1px solid #33ccff;
   border-radius: 4px;
   padding: 5px 5px 5px 2px;
   background: #252746;
@@ -54,54 +54,54 @@ textarea,
 }
 
 textarea {
-	min-height: 50vh;
+  min-height: 50vh;
 }
 
 textarea::placeholder {
-	text-align: center;
-	color: #888;
+  text-align: center;
+  color: #888;
 }
 
 .tool {
-	display: flex;
-	width: 75%;
-	flex-direction: column;
-	text-align: center;
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  text-align: center;
 }
 
 .input-panel {
-	height: auto;
+  height: auto;
 }
 
 .hash {
-	padding: 5px;
+  padding: 5px;
 }
 .hash::selection {
-	background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 h3 {
-	padding: 10px;
-	font-weight: 400;
+  padding: 10px;
+  font-weight: 400;
 }
 
 footer {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 .version {
-	color: #33CCFF;
+  color: #33ccff;
 }
 
 .copy-icon {
-	float: right;
-	background: transparent;
-	border: none;
+  float: right;
+  background: transparent;
+  border: none;
 }
 
 .copied {
-	padding: 10px;
-	color: #33d9b2;
-	font-size: 1.5em;
+  padding: 10px;
+  color: #33d9b2;
+  font-size: 1.5em;
 }

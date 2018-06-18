@@ -1,4 +1,4 @@
-import './index.css'
+import './index.css';
 
 import * as React from 'react';
 import { AlertCircle } from 'react-feather';
@@ -12,7 +12,9 @@ export default class Header extends React.PureComponent {
           <span className="bin">bin</span>
         </h1>
         <span>
-          <a href="//github.com/ydlamba/minbin/issues" target="_blank"><AlertCircle className="alert-icon" color="#fff" size={20}/></a>
+          <a href="//github.com/ydlamba/minbin/issues" target="_blank">
+            <AlertCircle className="alert-icon" color="#fff" size={20} />
+          </a>
         </span>
       </header>
     );
