@@ -1,3 +1,3 @@
-# Minbin
+# MINBIN
 
 TODO...

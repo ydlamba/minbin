@@ -82,7 +82,7 @@ class Main extends React.PureComponent<Props, IState> {
     }
   }
   public onCopy() {
-    this.setState({copied: true}); 
+    this.setState({copied: true});
   }
   public render() {
     return (
