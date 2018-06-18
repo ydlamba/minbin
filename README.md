@@ -1,6 +1,8 @@
 # ![MINBIN](public/images/minbin.png)
 
-![Version](https://img.shields.io/badge/dynamic/json.svg?label=Version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fydlamba%2Fminbin%2Fmaster%2Fpackage.json%3Ftoken%3DAUQO2iKaGJaqhgJpSEKzpx1kXtU1fcmxks5bMNy7wA%253D%253D&query=%24.version&longCache=true&style=for-the-badge)
+![Version](https://img.shields.io/badge/dynamic/json.svg?label=Version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fydlamba%2Fminbin%2Fmaster%2Fpackage.json%3Ftoken%3DAUQO2iKaGJaqhgJpSEKzpx1kXtU1fcmxks5bMNy7wA%253D%253D&query=%24.version&longCache=true)
+[![Build Status](https://travis-ci.org/ydlamba/minbin.svg?branch=master)](https://travis-ci.org/ydlamba/minbin)
+![License](https://img.shields.io/npm/l/express.svg?longCache=true)
 ### Sneak Peak
 ![Image](public/images/image.png)
 Check it out: [https://ydlamba.github.io/minbin](https://ydlamba.github.io/minbin)
@@ -22,8 +24,6 @@ $ yarn build
 $ yarn deploy
 ```
 ### Built With
-[TypeScript](https://github.com/Microsoft/TypeScript) + [react](https://github.com/facebook/react) + [redux](https://github.com/reduxjs/redux) & bundled with [webpack](https://github.com/webpack/webpack)
+[TypeScript](https://github.com/Microsoft/TypeScript) + [react](https://github.com/facebook/react) + [redux](https://github.com/reduxjs/redux) + bundled with [webpack](https://github.com/webpack/webpack) + :heart:
 
-### License
-![License](https://img.shields.io/npm/l/express.svg?longCache=true&style=for-the-badge)
 
