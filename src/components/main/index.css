@@ -50,10 +50,11 @@ textarea,
   padding: 5px 5px 5px 2px;
   background: #252746;
   font-family: inherit;
+  word-wrap: break-word;
 }
 
 textarea {
-	min-height: 400px;
+	min-height: 50vh;
 }
 
 textarea::placeholder {

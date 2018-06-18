@@ -1,4 +1,5 @@
-# ![MINBIN](public/images/minbin.png) - Minimal set of tools
+# ![MINBIN](public/images/minbin.png)
+
 ![Version](https://img.shields.io/badge/dynamic/json.svg?label=Version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fydlamba%2Fminbin%2Fmaster%2Fpackage.json%3Ftoken%3DAUQO2iKaGJaqhgJpSEKzpx1kXtU1fcmxks5bMNy7wA%253D%253D&query=%24.version&longCache=true&style=for-the-badge)
 
 Check it out: [https://ydlamba.github.io/minbin](https://ydlamba.github.io/minbin)
