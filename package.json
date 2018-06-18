@@ -1,6 +1,6 @@
 {
   "name": "minbin",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "A minimal set of tools",
   "scripts": {
     "start": "webpack-dev-server --mode development --hot --inline",

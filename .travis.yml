@@ -13,7 +13,7 @@ deploy:
   local-dir: dist
   name: Yash Dev Lamba
   email: yashdev18@gmail.com
-  project-name: editor
+  project-name: minbin
   on:
     branch: master
     tags: true
