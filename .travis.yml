@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "8"
+script:
+  - yarn lint
+  - yarn build
+cache: yarn
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: dist
+  name: Yash Dev Lamba
+  email: yashdev18@gmail.com
+  project-name: editor
+  on:
+    branch: master
+    tags: true
