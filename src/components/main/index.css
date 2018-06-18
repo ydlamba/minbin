@@ -35,6 +35,7 @@ li:hover {
 
 .active {
 	color: #33CCFF;
+	font-weight: 400;
 }
 
 textarea,
@@ -92,3 +93,14 @@ footer {
 	color: #33CCFF;
 }
 
+.copy-icon {
+	float: right;
+	background: transparent;
+	border: none;
+}
+
+.copied {
+	padding: 10px;
+	color: #27ae60;
+	font-size: 1.5em;
+}

@@ -7,6 +7,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { State } from '../../constants';
 import SideBar from './side-bar';
+import Clipboard from 'react-clipboard.js';
+import { Copy } from 'react-feather';
 
 interface Props {
   input?: string;
@@ -16,15 +18,25 @@ interface Props {
   setTool: (val: any) => void;
 }
 
+interface IState {
+  copied?: boolean;
+}
+
 declare const VERSION: string;
 
-class Main extends React.PureComponent<Props> {
+class Main extends React.PureComponent<Props, IState> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      copied: false,
+    };
+  }
   public handleChange(event) {
     if (event.target.value && event.target.value !== '') {
       this.props.setInput(event.target.value);
     }
   }
-  public calculateHash() {
+  public calculateOutput() {
     const input = this.props.input;
     switch (this.props.tool) {
       case 'md5':
@@ -39,6 +51,13 @@ class Main extends React.PureComponent<Props> {
   }
   public addEventListeners(el, s, fn) {
     s.split(' ').forEach(e => el.addEventListener(e, fn, false));
+  }
+  public componentDidUpdate() {
+    if(this.state.copied) {
+      setTimeout(() => {
+        this.setState({copied: false});
+      }, 3500);
+    }
   }
   public componentDidMount() {
     const textarea = this.refs.input as any;
@@ -62,6 +81,9 @@ class Main extends React.PureComponent<Props> {
         break;
     }
   }
+  public onCopy() {
+    this.setState({copied: true}); 
+  }
   public render() {
     return (
       <main>
@@ -72,8 +94,12 @@ class Main extends React.PureComponent<Props> {
           </div>
           <h3>Hash</h3>
           <div className="output-panel">
-            <span className="hash">{this.calculateHash()}</span>
+            <span className="hash">{this.calculateOutput()}</span>
+            <Clipboard className="copy-icon" data-clipboard-text={this.calculateOutput()} button-title="Copy" onSuccess={this.onCopy.bind(this)}>
+              <Copy className="alert-icon" color="#fff" size={20}/>
+            </Clipboard>
           </div>
+          <span className="copied">{this.state.copied ? 'Copied!' : ''}</span>
         </div>
         <SideBar/>
         <footer>
