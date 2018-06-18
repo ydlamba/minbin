@@ -7,7 +7,7 @@ import AppShell from './components/app-shell';
 import configureStore from './store/configure-store';
 
 // Google analytics
-ReactGA.initialize('');
+ReactGA.initialize('UA-107751270-2');
 
 function logPageView() {
   ReactGA.set({ page: window.location.pathname + window.location.search });
