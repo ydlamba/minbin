@@ -13,7 +13,9 @@ interface Props {
 class SideBar extends React.PureComponent<Props> {
   public handleChange(value) {
     this.props.setTool(value);
-    this.props.history.push(value);
+    if(this.props.history.location.pathname.replace(/\//g,'') !== value) {
+      this.props.history.push(value);
+    }
   }
   public render() {
     return (
@@ -23,6 +25,7 @@ class SideBar extends React.PureComponent<Props> {
           <li className={this.props.tool === 'md5' ? 'active' : ''} onClick={this.handleChange.bind(this, 'md5')}>MD5</li>
           <li className={this.props.tool === 'sha1' ? 'active' : ''} onClick={this.handleChange.bind(this, 'sha1')}>SHA-1</li>
           <li className={this.props.tool === 'sha256' ? 'active' : ''} onClick={this.handleChange.bind(this, 'sha256')}>SHA-256</li>
+          <li className={this.props.tool === 'ripemd160' ? 'active' : ''} onClick={this.handleChange.bind(this, 'ripemd160')}>RIPEMD-160</li>
         </ul>
       </nav>
     );

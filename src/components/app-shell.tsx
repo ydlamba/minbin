@@ -19,6 +19,7 @@ export default class AppShell extends React.Component<Props> {
         <Route path="/md5" component={App} />
         <Route path="/sha256" component={App} />
         <Route path="/sha1" component={App} />
+        <Route path="/ripemd160" component={App} />
       </Switch>
     );
   }

@@ -45,6 +45,8 @@ class Main extends React.PureComponent<Props, IState> {
         return CryptoJS.SHA1(input).toString();
       case 'sha256':
         return CryptoJS.SHA256(input).toString();
+      case 'ripemd160':
+        return CryptoJS.RIPEMD160(input).toString();
       default:
         return;
     }
@@ -75,6 +77,9 @@ class Main extends React.PureComponent<Props, IState> {
         this.props.setTool('sha1');
         break;
       case '/sha256':
+        this.props.setTool('sha256');
+        break;
+      case '/ripemd160':
         this.props.setTool('sha256');
         break;
       default:
