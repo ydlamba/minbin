@@ -37,19 +37,27 @@ li:hover {
 	color: #33CCFF;
 }
 
-textarea {
+textarea,
+.output-panel {
   width: 100%;
-  height: 400px;
   outline: none;
-  overflow: auto;
   resize: none;
   color: #33CCFF;
   font-size: 1.2em;
   border: 1px solid #33CCFF;
   border-radius: 4px;
-  padding: 5px 0;
+  padding: 5px 5px 5px 2px;
   background: #252746;
   font-family: inherit;
+}
+
+textarea {
+	min-height: 400px;
+}
+
+textarea::placeholder {
+	text-align: center;
+	color: #888;
 }
 
 .tool {
@@ -62,10 +70,12 @@ textarea {
 .input-panel {
 	height: auto;
 }
-.output-panel {
-	height: auto;
-	color: #33CCFF;
-	font-size: 1.5em;
+
+.hash {
+	padding: 5px;
+}
+.hash::selection {
+	background: rgba(255,255,255,0.2);
 }
 
 h3 {
@@ -81,3 +91,4 @@ footer {
 .version {
 	color: #33CCFF;
 }
+

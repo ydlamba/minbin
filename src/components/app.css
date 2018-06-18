@@ -18,3 +18,12 @@ body {
 	background: #252746;
 	background-size: cover;
 }
+
+::-webkit-scrollbar {
+    width: 0.4em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 5px;
+}

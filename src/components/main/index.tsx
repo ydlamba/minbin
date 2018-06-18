@@ -68,11 +68,11 @@ class Main extends React.PureComponent<Props> {
         <div className="tool">
           <h3>Input</h3>
           <div className="input-panel">
-            <textarea ref="input" spellCheck={false} autoFocus/>
+            <textarea placeholder="Remember, be nice!" ref="input" spellCheck={false} autoFocus/>
           </div>
           <h3>Hash</h3>
           <div className="output-panel">
-            {this.calculateHash()}
+            <span className="hash">{this.calculateHash()}</span>
           </div>
         </div>
         <SideBar/>
