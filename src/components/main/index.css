@@ -35,7 +35,6 @@ li:hover {
 
 .active {
   color: #33ccff;
-  font-weight: 400;
 }
 
 textarea,
@@ -74,8 +73,10 @@ textarea::placeholder {
 }
 
 .hash {
+  user-select: all;
   padding: 5px;
 }
+
 .hash::selection {
   background: rgba(255, 255, 255, 0.2);
 }
@@ -98,6 +99,7 @@ footer {
   float: right;
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .copied {

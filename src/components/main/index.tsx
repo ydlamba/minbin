@@ -58,7 +58,7 @@ class Main extends React.PureComponent<Props, IState> {
     if (this.state.copied) {
       setTimeout(() => {
         this.setState({ copied: false });
-      }, 3500);
+      }, 2500);
     }
   }
   public componentDidMount() {
