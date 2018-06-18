@@ -6,6 +6,8 @@
     "start": "webpack-dev-server --mode development --hot --inline",
     "build": "npm run clean && webpack --mode production --progress",
     "clean": "rm -rf dist",
+    "format": "tslint -p . --fix && prettier --write 'src/**/*.{ts,tsx,css}'",
+    "lint": "tslint -p . && prettier --list-different 'src/**/*.{ts,tsx,css}'",
     "postbuild": "rsync -r --ignore-existing public/* dist",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "es6",
     "module": "es2015",
-    "lib": ["es2017", "dom"],
     "moduleResolution": "node",
     "declaration": false,
     "noImplicitAny": false,
@@ -14,5 +13,5 @@
     "allowSyntheticDefaultImports": true,
     "importHelpers": true
   },
-  "files": ["src/index.tsx"],
+  "files": ["src/index.tsx"]
 }

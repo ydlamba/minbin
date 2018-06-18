@@ -2,13 +2,13 @@ import './index.css';
 
 import * as CryptoJS from 'crypto-js';
 import * as React from 'react';
-import * as Actions from '../../actions';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { State } from '../../constants';
-import SideBar from './side-bar';
 import Clipboard from 'react-clipboard.js';
 import { Copy } from 'react-feather';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import * as Actions from '../../actions';
+import { State } from '../../constants';
+import SideBar from './side-bar';
 
 interface Props {
   input?: string;

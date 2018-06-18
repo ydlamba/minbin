@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import * as Actions from '../../../actions';
 import { State } from '../../../constants';
-import { withRouter } from 'react-router-dom';
 
 interface Props {
   tool?: string;
