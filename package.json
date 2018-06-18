@@ -1,6 +1,6 @@
 {
   "name": "minbin",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A minimal set of tools",
   "main": "index.js",
   "scripts": {
