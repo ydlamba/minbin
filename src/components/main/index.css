@@ -34,6 +34,7 @@ li:hover {
 }
 
 .active {
+  text-shadow: 0px 0px 20px #33ccff;
   color: #33ccff;
 }
 
@@ -59,6 +60,11 @@ textarea {
 textarea::placeholder {
   text-align: center;
   color: #888;
+}
+
+.output-panel:hover {
+  transition: box-shadow 0.25s ease-in-out;
+  box-shadow: 0px 0px 20px #33ccff;
 }
 
 .tool {
