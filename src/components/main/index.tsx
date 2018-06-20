@@ -3,7 +3,7 @@ import './index.css';
 import * as CryptoJS from 'crypto-js';
 import * as React from 'react';
 import Clipboard from 'react-clipboard.js';
-import { Copy } from 'react-feather';
+import { Copy, Edit2, Hash } from 'react-feather';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import * as Actions from '../../actions';
@@ -93,11 +93,16 @@ class Main extends React.PureComponent<Props, IState> {
     return (
       <main>
         <div className="tool">
-          <h3>Input</h3>
+          <h3>
+            <span>Input</span>
+            <Edit2 color="#fff" size={20} />
+          </h3>
           <div className="input-panel">
             <textarea placeholder="Remember, be nice!" ref="input" spellCheck={false} autoFocus />
           </div>
-          <h3>Hash</h3>
+          <h3>
+            <span>Hash</span> <Hash color="#fff" size={20} />
+          </h3>
           <div className="output-panel">
             <span className="hash">{this.calculateOutput()}</span>
             <Clipboard

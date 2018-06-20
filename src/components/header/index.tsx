@@ -13,7 +13,10 @@ export default class Header extends React.PureComponent {
         </h1>
         <span>
           <a href="//github.com/ydlamba/minbin/issues" target="_blank">
-            <AlertCircle className="alert-icon" color="#fff" size={20} />
+            <h3>
+              <span>Issues</span>
+              <AlertCircle color="#fff" size={20} />
+            </h3>
           </a>
         </span>
       </header>

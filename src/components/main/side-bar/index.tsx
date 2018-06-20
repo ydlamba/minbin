@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Settings } from 'react-feather';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import * as Actions from '../../../actions';
@@ -21,22 +22,40 @@ class SideBar extends React.PureComponent<Props> {
     return (
       <nav>
         <ul>
-          <h3>Options</h3>
-          <li className={this.props.tool === 'md5' ? 'active' : ''} onClick={this.handleChange.bind(this, 'md5')}>
-            MD5
-          </li>
-          <li className={this.props.tool === 'sha1' ? 'active' : ''} onClick={this.handleChange.bind(this, 'sha1')}>
-            SHA-1
-          </li>
-          <li className={this.props.tool === 'sha256' ? 'active' : ''} onClick={this.handleChange.bind(this, 'sha256')}>
-            SHA-256
-          </li>
-          <li
-            className={this.props.tool === 'ripemd160' ? 'active' : ''}
-            onClick={this.handleChange.bind(this, 'ripemd160')}
-          >
-            RIPEMD-160
-          </li>
+          <h3>
+            <span>Settings</span> <Settings color="#fff" size={20} />
+          </h3>
+          <div className="settings-panel">
+            <section>
+              <h3>Encryption</h3>
+              <li className={this.props.tool === 'md5' ? 'active' : ''} onClick={this.handleChange.bind(this, 'md5')}>
+                MD5
+              </li>
+              <li className={this.props.tool === 'sha1' ? 'active' : ''} onClick={this.handleChange.bind(this, 'sha1')}>
+                SHA-1
+              </li>
+              <li
+                className={this.props.tool === 'sha256' ? 'active' : ''}
+                onClick={this.handleChange.bind(this, 'sha256')}
+              >
+                SHA-256
+              </li>
+              <li
+                className={this.props.tool === 'ripemd160' ? 'active' : ''}
+                onClick={this.handleChange.bind(this, 'ripemd160')}
+              >
+                RIPEMD-160
+              </li>
+            </section>
+            <section>
+              <h3>Decryption</h3>
+              <li className="disabled">COMING SOON</li>
+            </section>
+            <section>
+              <h3>Random Generation</h3>
+              <li className="disabled">COMING SOON</li>
+            </section>
+          </div>
         </ul>
       </nav>
     );

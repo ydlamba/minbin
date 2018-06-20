@@ -15,11 +15,23 @@ nav {
 }
 
 ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 75%;
   list-style: none;
+}
+
+.settings-panel {
+  max-height: 50vh;
+  overflow: auto;
+  padding: 5px;
+  border: 1px solid #33ccff;
+  border-radius: 4px;
+}
+
+section {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 0;
 }
 
 li {
@@ -38,6 +50,15 @@ li:hover {
   color: #33ccff;
 }
 
+.disabled {
+  text-transform: uppercase;
+}
+
+.disabled:hover {
+  color: #fff;
+  cursor: default;
+}
+
 textarea,
 .output-panel {
   width: 100%;
@@ -47,7 +68,7 @@ textarea,
   font-size: 1.2em;
   border: 1px solid #33ccff;
   border-radius: 4px;
-  padding: 5px 5px 5px 2px;
+  padding: 5px;
   background: #252746;
   font-family: inherit;
   word-wrap: break-word;
@@ -80,7 +101,6 @@ textarea::placeholder {
 
 .hash {
   user-select: all;
-  padding: 5px;
 }
 
 .hash::selection {
@@ -88,8 +108,15 @@ textarea::placeholder {
 }
 
 h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   font-weight: 400;
+}
+
+h3 span {
+  padding: 0 5px;
 }
 
 footer {
@@ -113,3 +140,10 @@ footer {
   color: #33d9b2;
   font-size: 1.5em;
 }
+
+/* hr {
+  width: 100%;
+  margin: 10px;
+  border-color: #33ccff;
+}
+ */
