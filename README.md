@@ -6,7 +6,7 @@
 
 A minimal set of somes handly tools like hash calculator, password generation.
 ### Sneak Peak
-![Image](public/images/image.png)
+<img style="display:block;margin:0 auto;" src="public/images/screenshot.png" alt="Screenshot" />
 <p align="center">Check it out: <a href="https://ydlamba.github.io/minbin" target="_blank">https://ydlamba.github.io/minbin</a>
 </p>
 
